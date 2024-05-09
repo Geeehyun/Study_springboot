@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>쿼리스트링</h3>
+<a th:href="@{/hello(name='AAA', age=16)}">Go to /hello</a>
+<!-- 타임리프 문법을 적용시킨 태그는 사실 html태그는 아님 타임리프 엔진이 다 해석을 하고 html태그로 만드는거지 우리가 작성한하는 건 사실상 html태그는 아직 아님 -->
+<!-- 링크를 걸때는 @{}로 걸고 괄호 안에 쿼리스트링 을 작성해줄 수 있음 위 문장을 바꾸면 http://localhost:8080/hello?name=AAA&age=16 -->
+
+<a th:href="@{/hello(types=${ {'aaa', 'bbb', 'ccc' } }, age=16)}">객체 파라미터</a>
+
+<a th:href="@{/hello(name='한글', 나이=16)}">한글 파라미터</a>
+
+
+</body>
+</html>

@@ -20,4 +20,10 @@ public class SampleController {
         List<String> list = Arrays.asList("AAA", "BBB", "CCC");
         model.addAttribute("list", list);
     }
+    @GetMapping("/ex/ex2")
+    public void ex2(Model model){
+    }
+    @GetMapping("/ex/ex3")
+    public void ex3(Model model){
+    }
 }

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/fragment.html}"
+      >
+<!--/*
+<th:block>
+- thymeleaf-layout로 라이브러리 추가 필요
+- html태그에서 division태그와 유사
+- 레이아웃 생성, 특정 페이지에서 필요한 부분만 작성 가능
+*/-->
+<div><h3>헤더 영역</h3></div>
+
+<div layout:fragment="content">
+<!--/*  layout:fragment : ID같은거  */-->
+    <p>내용?</p>
+</div>
+
+<script layout:fragment="script" th:inline="javascript">
+    const arr = [[${arr}]]
+</script>
+
+
+
+
